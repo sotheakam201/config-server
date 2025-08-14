@@ -1,0 +1,12 @@
+server:
+  port: 9091  # Gateway will run on this port
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: product-service
+          uri: lb://PRODUCT-SERVICE  # URL of your Product service
+          predicates:
+            - Path=/api/v1/products/**       # Routes requests starting with /products
+
