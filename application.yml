@@ -1,1 +1,1 @@
-message: "Hello this config-server"
+message: ${MSG}
