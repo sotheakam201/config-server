@@ -9,4 +9,7 @@ spring:
           uri: lb://PRODUCT-SERVICE  # URL of your Product service
           predicates:
             - Path=/api/v1/products/**       # Routes requests starting with /products
-
+        - id: customer-service
+          uri: http://customer-service:8080   # Laravel container + port
+          predicates:
+            - Path=/api/v1/customers/**       # Map gateway path to Laravel
