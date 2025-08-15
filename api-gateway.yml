@@ -14,4 +14,5 @@ spring:
           predicates:
             - Path=/api/v1/customers/**       # Map gateway path to Laravel
           filters:
-            - RewritePath=/api/v1/customers/(?<segment>.*), /$\{segment}
+#            - RewritePath=/api/v1/customers/(?<segment>.*), /$\{segment}
+            - RewritePath=/api/v1/customers/(?<segment>.*), /${segment}
