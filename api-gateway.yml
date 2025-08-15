@@ -13,6 +13,6 @@ spring:
           uri: http://customer-service:8080   # Laravel container + port
           predicates:
             - Path=/api/v1/customers/**       # Map gateway path to Laravel
-          filters:
-#            - RewritePath=/api/v1/customers/(?<segment>.*), /$\{segment}
-            - RewritePath=/api/v1/customers/(?<segment>.*), /${segment}
+#          filters:
+##            - RewritePath=/api/v1/customers/(?<segment>.*), /$\{segment}
+#            - RewritePath=/api/v1/customers/(?<segment>.*), /${segment}
